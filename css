@@ -38,12 +38,5 @@
     box-shadow: 0 0 20px #fff, 0 0 40px #fff;
     transform: scale(1.05);
   }
-  .foto-redonda {
-    width: 200px;           /* ou qualquer tamanho que você quiser */
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #000; /* opcional, pra dar um contorno bonito */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra suave */
-  }
+ 
   
