@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Unbounded', sans-serif;
+  background-color: #fff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+.header {
+  position: relative;
+  background-color: #000;
+  height: 200px;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
+.main {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.kanji-fire {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.symbol {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.symbol img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portfolio {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 3px solid #000000;
+  border-radius: 8px;
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+}
