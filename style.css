@@ -6,7 +6,7 @@
   --accent-color: #121413;
   --text-color: #121413;
   --muted-color: #03ff46;
-  --kanji-color: #03ff46;
+  --kanji-color: #ffffff;
   --shadow: 0 0 10px rgba(36, 43, 35, 0.468);
   --radius: 16px;
 }
@@ -21,7 +21,7 @@ body {
 
 .header {
   height: 100px;
-  background: linear-gradient(90deg, #00f0ff, #ff0055);
+  background: linear-gradient(90deg, #000000, #03ff46);
   box-shadow: var(--shadow);
   animation: slideInTop 1s ease-out forwards;
 }
@@ -50,10 +50,10 @@ body {
 .kanji-fire {
   font-size: 5rem;
   color: var(--kanji-color);
-  position: absolute;
+  position: center;
   top: 20px;
   right: 20px;
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
 }
 
 .symbol img {
@@ -118,7 +118,7 @@ body {
 }
 
 .button:hover {
-  background-color: #00c0cc;
+  background-color: #03ff46;
 }
 
 /* Animações */
