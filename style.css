@@ -1,9 +1,149 @@
-.selector {
-	width: 1200px;
-	height: 3140px;
-	display: block;
-	background-color: #ffffff;
-	overflow: hidden;
-	gap: 10px;
-	position: absolute;
-	border-radius: 0px 0px 0px 0px;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #0f0f1a;
+  --card-bg: #1c1c2e;
+  --accent-color: #00f0ff;
+  --text-color: #ffffff;
+  --muted-color: #aaaaaa;
+  --kanji-color: #ff0055;
+  --shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.header {
+  height: 100px;
+  background: linear-gradient(90deg, #00f0ff, #ff0055);
+  box-shadow: var(--shadow);
+  animation: slideInTop 1s ease-out forwards;
+}
+
+.main {
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  animation: fadeIn 1.2s ease;
+}
+
+.title {
+  font-size: 3.5rem;
+  letter-spacing: 6px;
+  color: var(--accent-color);
+  margin-bottom: 0.3em;
+  text-shadow: var(--shadow);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--muted-color);
+  margin-bottom: 1.5em;
+}
+
+.kanji-fire {
+  font-size: 5rem;
+  color: var(--kanji-color);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  animation: pulse 2s infinite;
+}
+
+.symbol img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+  border: 3px solid var(--accent-color);
+  box-shadow: var(--shadow);
+  animation: fadeInUp 1s ease;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.project {
+  background-color: var(--card-bg);
+  padding: 25px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.7s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+}
+
+.project h3 {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.project a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00c0cc;
+}
+
+/* Animações */
+@keyframes slideInTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
