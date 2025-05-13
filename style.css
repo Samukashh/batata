@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
 
 :root {
-  --bg-color: #0f0f1a;
+  --bg-color: #fcfffe;
   --card-bg: #1c1c2e;
-  --accent-color: #00f0ff;
-  --text-color: #ffffff;
-  --muted-color: #aaaaaa;
-  --kanji-color: #ff0055;
-  --shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  --accent-color: #121413;
+  --text-color: #121413;
+  --muted-color: #03ff46;
+  --kanji-color: #03ff46;
+  --shadow: 0 0 10px rgba(34, 255, 0, 0.468);
   --radius: 16px;
 }
 
