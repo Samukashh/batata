@@ -2,10 +2,10 @@
 
 :root {
   --bg-color: #000000;
-  --text-color: #ffff66;
-  --highlight-bg: #ffff66;
+  --text-color: #ffcc00;
+  --highlight-bg: #ffcc00;
   --highlight-text: #000000;
-  --border-color: #ffff66;
+  --border-color: #ffcc00;
   --font: 'Share Tech Mono', monospace;
 }
 
@@ -15,51 +15,55 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
-.header {
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid var(--border-color);
   background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 10px;
-  border-bottom: 2px solid var(--border-color);
+}
+
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .header::before {
-  content: "1-Jan-87";
+  content: "ЖУРНАЛ 00:00:00";
 }
 
 .header::after {
-  content: "1:44 am";
+  content: "СТАТУС: ГОТОВ";
 }
 
 .main {
-  padding: 20px;
-  text-align: left;
+  margin-bottom: 30px;
 }
 
 .title {
   font-size: 24px;
-  text-transform: uppercase;
-  border-bottom: 1px dashed var(--text-color);
+  border-bottom: 2px solid var(--border-color);
   margin-bottom: 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .subtitle, .kanji-fire {
-  color: var(--text-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .symbol img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border: 2px solid var(--border-color);
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--border-color);
+  margin: 5px;
 }
 
 .portfolio {
@@ -70,16 +74,20 @@ body {
 
 .project {
   border: 1px solid var(--border-color);
-  padding: 15px;
+  padding: 10px;
   background-color: var(--bg-color);
 }
 
 .project h3 {
-  margin-top: 0;
   background-color: var(--highlight-bg);
   color: var(--highlight-text);
-  padding: 4px;
+  padding: 4px 8px;
   display: inline-block;
+  font-size: 16px;
+}
+
+.project p, .project a {
+  margin-left: 10px;
 }
 
 .project a {
@@ -88,25 +96,27 @@ body {
 }
 
 .project a:hover {
-  background-color: var(--highlight-bg);
   color: var(--highlight-text);
-  text-decoration: none;
+  background-color: var(--highlight-bg);
 }
 
 .button {
-  background-color: var(--highlight-bg);
-  color: var(--highlight-text);
-  padding: 6px 12px;
-  border: none;
-  font-family: var(--font);
-  text-decoration: none;
   display: inline-block;
   margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  font-family: var(--font);
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .button:hover {
   background-color: var(--text-color);
+  color: var(--bg-color);
 }
+
 
 
 
