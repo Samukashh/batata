@@ -1,123 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
 :root {
-  --bg-color: #000000;
-  --text-color: #ffcc00;
-  --highlight-bg: #ffcc00;
-  --highlight-text: #000000;
-  --border-color: #ffcc00;
-  --font: 'Share Tech Mono', monospace;
-}
+	--bg-color: #000000;
+	--text-color: #ffaa00;
+	--highlight-bg: #ffaa00;
+	--highlight-text: #000000;
+	--border-color: #ffaa00;
+	--font: 'Share Tech Mono', monospace;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font);
-  font-size: 15px;
-  line-height: 1.4;
-}
+  body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: var(--font);
+	font-size: 15px;
+  }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 2px solid var(--border-color);
-  background-color: var(--bg-color);
-}
+  .container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 2px solid var(--border-color);
+  }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
+  .header {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--border-color);
+	padding: 5px 0;
+	margin-bottom: 20px;
+  }
 
-.header::before {
-  content: "ЖУРНАЛ 00:00:00";
-}
+  .header::before {
+	content: "ЖУРНАЛ 00:00:00";
+  }
 
-.header::after {
-  content: "СТАТУС: ГОТОВ";
-}
+  .header::after {
+	content: "СТАТУС: ГОТОВ";
+  }
 
-.main {
-  margin-bottom: 30px;
-}
+  .terminal-line {
+	margin-bottom: 20px;
+	font-size: 16px;
+  }
 
-.title {
-  font-size: 24px;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-}
+  .cursor {
+	display: inline-block;
+	animation: blink 1s step-start infinite;
+  }
 
-.subtitle, .kanji-fire {
-  margin-bottom: 10px;
-}
+  @keyframes blink {
+	50% { opacity: 0; }
+  }
 
-.symbol img {
-  width: 100px;
-  height: 100px;
-  border: 1px solid var(--border-color);
-  margin: 5px;
-}
+  .title {
+	font-size: 24px;
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--border-color);
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+  }
 
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  .subtitle, .kanji-fire {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
 
-.project {
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  background-color: var(--bg-color);
-}
+  .symbol img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid var(--border-color);
+	margin: 5px;
+  }
 
-.project h3 {
-  background-color: var(--highlight-bg);
-  color: var(--highlight-text);
-  padding: 4px 8px;
-  display: inline-block;
-  font-size: 16px;
-}
+  .portfolio {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 0 20px;
+  }
 
-.project p, .project a {
-  margin-left: 10px;
-}
+  .project {
+	border: 1px solid var(--border-color);
+	padding: 10px;
+  }
 
-.project a {
-  color: var(--text-color);
-  text-decoration: underline;
-}
+  .project h3 {
+	background-color: var(--highlight-bg);
+	color: var(--highlight-text);
+	padding: 4px 8px;
+	display: inline-block;
+	font-size: 16px;
+  }
 
-.project a:hover {
-  color: var(--highlight-text);
-  background-color: var(--highlight-bg);
-}
+  .project p, .project a {
+	margin-left: 10px;
+  }
 
-.button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
-  border: 1px solid var(--border-color);
-  background-color: var(--highlight-bg);
-  color: var(--highlight-text);
-  font-family: var(--font);
-  text-decoration: none;
-  transition: 0.3s;
-}
+  .project a {
+	color: var(--text-color);
+	text-decoration: underline;
+  }
 
-.button:hover {
-  background-color: var(--text-color);
-  color: var(--bg-color);
-}
+  .project a:hover {
+	color: var(--highlight-text);
+	background-color: var(--highlight-bg);
+  }
 
+  .button {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 6px 12px;
+	border: 1px solid var(--border-color);
+	background-color: var(--highlight-bg);
+	color: var(--highlight-text);
+	font-family: var(--font);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.3s;
+  }
 
-
+  .button:hover {
+	background-color: var(--text-color);
+	color: var(--bg-color);
+  }
 
 
