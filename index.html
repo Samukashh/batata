@@ -1,59 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Interface</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Samuel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet" />
+  
 </head>
 <body>
-  <div class="container">
-    <header class="top-bar">
-      <div class="clock" id="clock">--:--:--</div>
-      <div class="status">SISTEMA ONLINE</div>
-    </header>
+  <header>
+    <h1>Samuel HSS</h1>
+  </header>
 
-    <main class="dashboard">
-      <section class="panel">
-        <h2>IDENTIFICAÇÃO</h2>
-        <p>Usuário: Samuel H.S.S</p>
-        <p>Curso: DSM - Fatec SJC</p>
-      </section>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#educacao">Educação</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-      <section class="panel">
-        <h2>PROJETOS</h2>
-        <ul>
-          <li>
-            <strong>Racing M</strong>: Jogo de corrida mecha futurista com foco em perseguições táticas e propulsores inspirados no SU-27. Em pré-produção com artes conceituais, modelagem 3D, e conteúdo sendo compartilhado no Instagram.
-          </li>
-          <li>
-            <strong>OSCAR</strong>: Curta-metragem cinematográfico de 20 minutos. Fui responsável pela direção criativa, cinematografia, e montagem visual, utilizando estética noir e narrativa introspectiva.
-          </li>
-          <li>
-            <strong>API RESTful</strong>: Projeto de backend para gerenciamento de dados de usuários e autenticação com JWT. Desenvolvido em Node.js com banco de dados MongoDB. Atualmente em fase de definição de endpoints e testes de integração.
-          </li>
-        </ul>
-      </section>
+  <section class="hero">
+    <h2>PORTFÓLIO</h2>
+    <p>火 - Projeto pessoal</p>
+    <img src="perfil.jpg" alt="Foto de perfil" />
+  </section>
 
-      <section class="panel">
-        <h2>CONTATO</h2>
-        <p>Email: samuel@example.com</p>
-        <p>GitHub: <a href="https://github.com/Samukashh" target="_blank">Samukashh</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/samuka.hss/" target="_blank">@samuka.hss</a></p>
-      </section>
-    </main>
-  </div>
+  <section class="section" id="sobre">
+    <h3>Sobre mim</h3>
+    <div class="card">
+      <p>Meu nome é Samuel Henrique Santos da Silva. Tenho ensino médio completo e estou cursando Desenvolvimento de Software Multiplataforma na FATEC - SJC. Sou um desenvolvedor iniciante focado em crescer tecnicamente e criativamente com interesse em programação de jogos e cinematografia.</p>
+    </div>
+    <div class="card">
+      <p>Este portfólio foi criado para apresentar meu progresso acadêmico e pessoal, demonstrando minha dedicação, estilo e abordagem aos desafios criativos. Busco oportunidades de estágio, colaboração ou orientação profissional.</p>
+    </div>
+  </section>
+
+  <section class="section" id="educacao">
+    <h3>Educação</h3>
+    <div class="card">
+      <h4>FATEC - São José dos Campos</h4>
+      <p><strong>Curso:</strong> Desenvolvimento de Software Multiplataforma</p>
+      <p><strong>Período:</strong> 2024 - Atual</p>
+      <p>Foco em programação, desenvolvimento de aplicativos, jogos e soluções multiplataforma.</p>
+    </div>
+    <div class="card">
+      <h4>Ensino Médio Completo</h4>
+      <p><strong>Concluído em:</strong> 2024</p>
+      <p>Área de Humanas com conhecimentos em design, marketing, geopolítica e inglês técnico.</p>
+    </div>
+  </section>
+
+  <section class="section skills">
+    <h3>Habilidades</h3>
+    <p>Cinematografia Lv.2</p>
+    <p>HTML Lv.1</p>
+    <p>CSS Lv.1</p>
+    <p>Design Gráfico Lv.1</p>
+    <p>Inglês Técnico Lv.1</p>
+    <p>Organização de Equipes Lv.2</p>
+    <p>Storytelling Visual Lv.2</p>
+    <p>Desenho Lv.1</p>
+    <p>Roteirização Lv.2</p>
+    <p>Áudio Visual Lv.2</p>
+    <p>Game Design Lv.1</p>
+  </section>
+
+  <section class="section" id="projetos">
+    <h3>Projetos</h3>
+    <div class="card">
+      <h4>MH3</h4>
+      <p>Jogo de corrida futurista com mechas, combinando adrenalina e tecnologia em um universo de ficção científica.</p>
+    </div>
+    <div class="card">
+      <h4>OSCAR</h4>
+      <p>Curta-metragem de 20 minutos onde fui responsável pela direção criativa e narrativa visual, superando desafios de produção e equipe.</p>
+    </div>
+    <div class="card">
+      <h4>API</h4>
+      <p>Projeto em fase de planejamento voltado para backend e organização de dados, com foco em aprendizado técnico.</p>
+    </div>
+    <div class="card">
+      <a href="Samuel Henrique Santos da Silva.pdf" class="button" download>Baixar Currículo</a>
+    </div>
+    <div class="card">
+      <h4>Redes Sociais</h4>
+      <p><a href="https://www.instagram.com/samuka.hss/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://github.com/Samukashh" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+    <div class="card">
+      <h4>Email</h4>
+      <p><a href="mailto:samuel.dinamico@myyahoo.com">samuel.dinamico@myyahoo.com</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h3>Contato</h3>
+    <form id="contactForm" action="mailto:samuel.dinamico@myyahoo.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="Nome" required placeholder="Seu nome completo" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" required placeholder="seuemail@exemplo.com" />
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="Mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Samuel Henrique Santos da Silva. Todos os direitos reservados.</p>
+  </footer>
 
   <script>
-    function updateClock() {
-      const clock = document.getElementById('clock');
-      const now = new Date();
-      clock.textContent = now.toLocaleTimeString();
-    }
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    setInterval(updateClock, 1000);
-    updateClock();
+      if (name === '') {
+        alert('Por favor, preencha seu nome.');
+        return false;
+      }
+      if (!emailPattern.test(email)) {
+        alert('Por favor, insira um email válido.');
+        return false;
+      }
+      if (message === '') {
+        alert('Por favor, escreva uma mensagem.');
+        return false;
+      }
+      return true;
+    }
   </script>
 </body>
 </html>
-
