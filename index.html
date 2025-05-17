@@ -1,63 +1,59 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio 火 - Portfólio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Retro Interface</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="header"></div>
-  <div class="main">
-    <div class="title">PORTFÓLIO</div>
-    <div class="subtitle">プロジェクト</div>
-    <div class="kanji-fire">火</div>
-    <div class="symbol"><img src="logo.PNG" alt="Logo"></div>
-    <div class="symbol"><img src="perfil.jpg" alt="Perfil"></div>
+  <div class="container">
+    <header class="top-bar">
+      <div class="clock" id="clock">--:--:--</div>
+      <div class="status">SISTEMA ONLINE</div>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel">
+        <h2>IDENTIFICAÇÃO</h2>
+        <p>Usuário: Samuel H.S.S</p>
+        <p>Curso: DSM - Fatec SJC</p>
+      </section>
+
+      <section class="panel">
+        <h2>PROJETOS</h2>
+        <ul>
+          <li>
+            <strong>Racing M</strong>: Jogo de corrida mecha futurista com foco em perseguições táticas e propulsores inspirados no SU-27. Em pré-produção com artes conceituais, modelagem 3D, e conteúdo sendo compartilhado no Instagram.
+          </li>
+          <li>
+            <strong>OSCAR</strong>: Curta-metragem cinematográfico de 20 minutos. Fui responsável pela direção criativa, cinematografia, e montagem visual, utilizando estética noir e narrativa introspectiva.
+          </li>
+          <li>
+            <strong>API RESTful</strong>: Projeto de backend para gerenciamento de dados de usuários e autenticação com JWT. Desenvolvido em Node.js com banco de dados MongoDB. Atualmente em fase de definição de endpoints e testes de integração.
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>CONTATO</h2>
+        <p>Email: samuel@example.com</p>
+        <p>GitHub: <a href="https://github.com/Samukashh" target="_blank">Samukashh</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/samuka.hss/" target="_blank">@samuka.hss</a></p>
+      </section>
+    </main>
   </div>
 
-  <div class="portfolio">
-    <div class="project">
-      <h3>NOME</h3>
-      <p>Samuel Henrique Santos da Silva</p>
-      <p>Cursando Desenvolvimento de Software Multiplataforma – Fatec - SJC</p>
-      <p>Olá! Meu nome é Samuel, tenho ensino médio completo e sou um desenvolvedor iniciante. Estou atualmente focado em desenvolver minhas habilidades técnicas e criativas. Tenho interesse em programação de jogos e cinematografia e busco constantemente aprender e evoluir por meio de projetos práticos.</p>
-    </div>
+  <script>
+    function updateClock() {
+      const clock = document.getElementById('clock');
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString();
+    }
 
-    <div class="project">
-      <h3>Habilidades</h3>
-      <p>CINEMATOGRAFIA</p>
-      <p>HTML</p>
-      <p>CSS</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="mh3.html">Projeto 1: MH3</a></h3>
-      <p>Descrição Geral: O Projeto MH3 consiste no desenvolvimento de um jogo de corrida futurista inspirado na franquia Armored Core.</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="oscar.html">Projeto 2: OSCAR</a></h3>
-      <p>Um curta-metragem de 20 minutos no qual atuei como a mente cinematográfica por trás da produção.</p>
-    </div>
-
-    <div class="project">
-      <h3>Projeto 3: API</h3>
-      <p>Estou na fase de planejamento de recursos.</p>
-    </div>
-
-    <div class="project">
-      <h3>Currículo</h3>
-      <a href="Samuel Henrique Santos da Silva.pdf" class="button" download>Baixar Currículo</a>
-    </div>
-
-    <div class="project">
-      <h3>Redes Sociais</h3>
-      <p>Instagram: <a href="https://www.instagram.com/samuka.hss/">@samuka.hss</a></p>
-      <p>Email: <a href="mailto:samuel@example.com">samuel@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/Samukashh">Samukashh</a></p>
-    </div>
-  </div>
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
+
