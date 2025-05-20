@@ -10,6 +10,7 @@ body {
   color: #2B2B2B;
   overflow-x: hidden;
   line-height: 1.6;
+  padding: 1rem;
 }
 
 
@@ -100,22 +101,14 @@ nav a:hover::after {
 }
 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-
 .section {
   background-color: #FFFFFF;
   padding: 2rem;
   border: 2px solid #324C40;
   border-radius: 12px;
   box-shadow: 4px 4px 0px #FDB515;
+  margin: 2rem auto;
+  max-width: 900px;
   transition: transform 0.3s ease;
 }
 
@@ -161,4 +154,36 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p,
+  .section p,
+  .section li {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+  }
 }
