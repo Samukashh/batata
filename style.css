@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@ body {
 
 header {
   background-color: #324C40;
-  padding: 0;
+  padding: 2rem 1rem;
   text-align: center;
   color: #F6F0E8;
 }
@@ -32,7 +33,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 0;
   flex-wrap: wrap;
 }
 
