@@ -94,14 +94,7 @@ nav a:hover::after {
   object-fit: cover;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+
 
 .section {
   background-color: #FFF;
