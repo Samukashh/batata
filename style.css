@@ -1,3 +1,6 @@
+/* =========================
+   VARIÁVEIS DE COR
+========================= */
 :root {
   --farm: #1f5e4b;
   --lettuce: #3fa34d;
@@ -6,6 +9,14 @@
   --pumpkin: #f28c28;
   --chilli: #b11226;
   --dark: #111;
+  --white: #ffffff;
+}
+
+/* =========================
+   BASE GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -13,17 +24,29 @@ body {
   font-family: 'Unbounded', sans-serif;
   background: var(--light);
   color: var(--dark);
+  line-height: 1.6;
 }
 
+/* =========================
+   SEÇÕES
+========================= */
 .section {
   max-width: 1100px;
   margin: 6rem auto;
   padding: 3rem;
-  background: #fff;
+  background: var(--white);
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+
+  /* animação */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
+/* =========================
+   TIPOGRAFIA
+========================= */
 h3 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -34,6 +57,10 @@ h4 {
   margin-bottom: 1.5rem;
   color: var(--farm);
 }
+
+/* =========================
+   PROJETOS
+========================= */
 .projeto-area {
   margin-bottom: 4rem;
 }
@@ -43,37 +70,47 @@ h4 {
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .projeto-item img {
   width: 100%;
   border-radius: 12px;
+  display: block;
 }
+
+/* =========================
+   CURSOR PERSONALIZADO
+========================= */
 .custom-cursor {
   width: 20px;
   height: 20px;
   border: 2px solid var(--farm);
   border-radius: 50%;
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease, background 0.3s;
+  transition: 
+    transform 0.15s ease,
+    background 0.3s ease;
   z-index: 9999;
 }
-.section {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
-}
 
+/* =========================
+   ANIMAÇÕES
+========================= */
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/* ===== RESPONSIVIDADE ===== */
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -94,12 +131,14 @@ h4 {
 /* Celulares */
 @media (max-width: 768px) {
   header {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 
   nav {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
@@ -125,13 +164,8 @@ h4 {
     padding: 2rem 1.5rem;
   }
 
-  .projeto-item img {
-    border-radius: 10px;
-  }
-
-  /* Cursor desativado em touch */
   .custom-cursor {
-    display: none;
+    display: none; /* desativa cursor em touch */
   }
 }
 
