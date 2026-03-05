@@ -173,3 +173,24 @@
     }
     
     }
+    /* ANIMAÇÃO DE COR */
+
+body{
+    transition:background 0.6s ease;
+    }
+    
+    /* BOTÃO COR */
+    
+    .random-color{
+    
+    background:#fff;
+    border:3px solid black;
+    font-weight:bold;
+    
+    }
+    
+    .random-color:hover{
+    
+    background:#ffe066;
+    
+    }
