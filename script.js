@@ -114,30 +114,21 @@ const pokemonColors = [
   
   ];
   /* BOTÃO */
-btn.addEventListener("click", function(){
+  btn.addEventListener("click", function(){
 
-  const randomIndex = Math.floor(Math.random() * pokemonColors.length);
-  
-  const pokemon = pokemonColors[randomIndex];
-  
-  const name = pokemon[0];
-  const bodyColor = pokemon[1];
-  const boxColor = pokemon[2];
-  const elementColor = pokemon[3];
-  
-  /* aplicar cores */
-  
-  document.body.style.background = bodyColor;
-  
-  document.querySelectorAll(".skills").forEach(el=>{
-  el.style.background = boxColor;
-  });
-  
-  document.querySelectorAll(".project").forEach(el=>{
-  el.style.background = elementColor;
-  });
-  
-  /* opcional: mostrar no console */
-  console.log("Pokemon escolhido:", name);
-  
-  });
+   const randomIndex = Math.floor(Math.random()*pokemonColors.length);
+   
+   const pokemon = pokemonColors[randomIndex];
+   
+   const name = pokemon[0];
+   const primary = pokemon[1];
+   const secondary = pokemon[2];
+   const tertiary = pokemon[3];
+   
+   document.documentElement.style.setProperty('--primary-color', primary);
+   document.documentElement.style.setProperty('--secondary-color', secondary);
+   document.documentElement.style.setProperty('--tertiary-color', tertiary);
+   
+   console.log("Pokemon escolhido:", name);
+   
+   });
