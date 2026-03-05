@@ -112,23 +112,36 @@ const pokemonColors = [
   ["Natu", "#228B22", "#2F2F2F", "#FF0000"],
   ["Xatu", "#2E8B57", "#2F2F2F", "#FF0000"]
   
-  ];
-  /* BOTÃO */
-  btn.addEventListener("click", function(){
+];
+  function softenColor(hex, amount = 0.35){
 
-   const randomIndex = Math.floor(Math.random()*pokemonColors.length);
+   const r = parseInt(hex.substring(1,3),16);
+   const g = parseInt(hex.substring(3,5),16);
+   const b = parseInt(hex.substring(5,7),16);
    
-   const pokemon = pokemonColors[randomIndex];
+   const newR = Math.round(r + (255 - r) * amount);
+   const newG = Math.round(g + (255 - g) * amount);
+   const newB = Math.round(b + (255 - b) * amount);
    
-   const name = pokemon[0];
-   const primary = pokemon[1];
-   const secondary = pokemon[2];
-   const tertiary = pokemon[3];
+   return `rgb(${newR}, ${newG}, ${newB})`;
    
-   document.documentElement.style.setProperty('--primary-color', primary);
-   document.documentElement.style.setProperty('--secondary-color', secondary);
-   document.documentElement.style.setProperty('--tertiary-color', tertiary);
-   
-   console.log("Pokemon escolhido:", name);
-   
-   });
+   }
+   btn.addEventListener("click", function(){
+
+      const randomIndex = Math.floor(Math.random()*pokemonColors.length);
+      
+      const pokemon = pokemonColors[randomIndex];
+      
+      const name = pokemon[0];
+      
+      const primary = softenColor(pokemon[1]);
+      const secondary = softenColor(pokemon[2]);
+      const tertiary = softenColor(pokemon[3]);
+      
+      document.documentElement.style.setProperty('--primary-color', primary);
+      document.documentElement.style.setProperty('--secondary-color', secondary);
+      document.documentElement.style.setProperty('--tertiary-color', tertiary);
+      
+      console.log("Pokemon escolhido:", name);
+      
+      });
