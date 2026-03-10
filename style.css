@@ -18,13 +18,14 @@
 }
 
 
-/* EFEITO GLASS (USADO EM TUDO) */
+/* EFEITO GLASS */
 
 .glass{
-    background:rgba(170,215,184,0.25);
+    background:color-mix(in srgb, var(--primary-color) 30%, transparent);
     box-shadow:18px 18px 7px rgba(0,0,0,0.25);
     border:5px solid black;
     backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
 }
 
 
@@ -35,7 +36,7 @@ body{
     font-family:'McLaren', sans-serif;
     padding:20px;
 
-    background-image: url("assets/download (33).jpg");
+    background-image:url("assets/download (33).jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
